@@ -1,9 +1,9 @@
 import React from "react";
 import style from '../page.module.css';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import Image from "next/image";
+import getConfig from 'next/config';
 
-// library.add(faEnvelope);
+const { publicRuntimeConfig } = getConfig();
 const Header = ({ activeSection, onSectionClick }) => {
     return (
         <div className={style.header}>
@@ -31,7 +31,7 @@ const Header = ({ activeSection, onSectionClick }) => {
                 </div>
             </div>
             <div className={style.mailer}>
-                <img src="/mail.png" style={{ height: '60%', width: '60%' }} alt="Mail" />
+                <Image src={`${publicRuntimeConfig.basePath}/mail.png`}  style={{ height: '60%', width: '60%' }} alt="Mail" />
                 {/* <FontAwesomeIcon icon={faEnvelope} /> */}
             </div>
         </div>
