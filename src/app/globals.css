@@ -20,7 +20,7 @@ body {
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: 'Roboto', sans-serif;
+  font-family: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -48,7 +48,8 @@ a {
 }
 
 .aboutParagraph h6 {
-  font-size: 20px;
+  font-size: 24px;
+  text-align: justify;
 }
 
 .videoContent h5 {

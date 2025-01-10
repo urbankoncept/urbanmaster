@@ -16,25 +16,16 @@
   font-family: var(--font-geist-sans);
 }
 
-/* .header {
-  display: flex;
-  gap: 16px;
-  height: 10vh;
-  background-color: #3F3F3F;
-  position: fixed;
-  width: 100%;
-  z-index: 1;
-} */
-
 .header {
   position: fixed;
   display: flex;
+  justify-content: space-between;
   top: 0;
   left: 0;
   width: 100%;
   gap: 16px;
   height: 10vh;
-  background-color: #3F3F3F;
+  background-color: #f8c905a8;
   /* Adjust as needed */
   z-index: 1000;
   /* Ensure it is above other content */
@@ -48,7 +39,6 @@
 }
 
 .content {
-  padding-top: 60px;
   /* Adjust based on header height */
   color: #ffffff;
   z-index: 2;
@@ -60,23 +50,43 @@
 }
 
 .about {
-  width: 100%;
+  width: 96%;
   padding: 25px;
-  background-color: #111111a3;
+  background-color: rgb(0 0 0 / 80%);
   display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+}
+
+.imgsContainer {
+  display: flex;
+  width: 100%;
+  height: 100%;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  gap: 40px;
 }
 
 .aboutImgs {
   display: flex;
   justify-content: center;
+  flex-direction: row;
+}
+
+.imgSpan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f8c905;
+  font-weight: 600;
+  font-size: 18px;
 }
 
 .imgss {
-  width: 20%;
-  height: 20%;
+  width: 40%;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -84,13 +94,25 @@
   width: 40%;
 }
 
+.aboutContentLook {
+  width: 75%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8%;
+}
+
 .active {
-  color: #f8c905;
+  color: #c22222;
   /* Highlight color */
 }
 
 .logo {
-  width: 5%;
+  /* width: 5%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .videoContent {
@@ -103,23 +125,21 @@
   font-size: 67px;
   color: white;
   opacity: 0.9;
-  background-color: #11111161;
+  /* background-color: #11111161; */
 }
 
 .sections {
-  width: 90%;
+  /* width: 90%; */
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 15px;
+  font-size: 20px;
   font-weight: 600;
   gap: 40px;
-  color: #ffffff;
+  color: #1e3053;
 }
 
 .mailer {
-  width: 5%;
-  background-color: #f8c905;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -211,6 +231,18 @@
   gap: 32px;
   grid-row-start: 2;
 }
+
+.type::after {
+  content: '|';
+  animation: cursor 1.1s infinite step-start;
+}
+ 
+@keyframes cursor {
+  50% {
+    opacity: 0;
+  }
+}
+
 
 .main ol {
   font-family: var(--font-geist-mono);

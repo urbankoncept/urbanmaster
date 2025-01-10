@@ -1,14 +1,14 @@
 import React from "react";
 import style from '../page.module.css';
-import Image from "next/image";
-import getConfig from 'next/config';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
-const { publicRuntimeConfig } = getConfig();
+// library.add(faEnvelope);
 const Header = ({ activeSection, onSectionClick }) => {
     return (
         <div className={style.header}>
             <div className={style.logo}>
-                logo
+                <img src="/logo.png" style={{ height: '50%', width: '100%', paddingLeft: '5%' }} alt="Mail" />
             </div>
             <div className={style.sections}>
                 <div className={activeSection === 'home' ? style.active : ''} onClick={() => onSectionClick('videoContent')}>
@@ -31,8 +31,7 @@ const Header = ({ activeSection, onSectionClick }) => {
                 </div>
             </div>
             <div className={style.mailer}>
-                <Image src={`${publicRuntimeConfig.basePath}/mail.png`}  style={{ height: '60%', width: '60%' }} alt="Mail" />
-                {/* <FontAwesomeIcon icon={faEnvelope} /> */}
+                {/* <img src="/mail.png" style={{ height: '80%', width: '100%', paddingRight: '20%' }} alt="Mail" /> */}
             </div>
         </div>
     );
