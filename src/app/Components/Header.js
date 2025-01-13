@@ -1,14 +1,18 @@
 import React from "react";
+import Image from "next/image";
+import getConfig from 'next/config';
 import style from '../page.module.css';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+
+const { publicRuntimeConfig } = getConfig();
 
 // library.add(faEnvelope);
 const Header = ({ activeSection, onSectionClick }) => {
     return (
         <div className={style.header}>
             <div className={style.logo}>
-                <img src="/logo.png" style={{ height: '50%', width: '100%', paddingLeft: '5%' }} alt="Mail" />
+                <Image src={`${publicRuntimeConfig.basePath}/logo.png`} style={{ height: '50%', width: '100%', paddingLeft: '5%' }} alt="Mail" />
             </div>
             <div className={style.sections}>
                 <div className={activeSection === 'home' ? style.active : ''} onClick={() => onSectionClick('videoContent')}>

@@ -5,7 +5,10 @@ const nextConfig = {
     output: 'export',
     publicRuntimeConfig: {
         basePath: '/urbanmaster'
-    }
+    },
+    images: {
+        unoptimized: true,
+    },
 };
  
 export default nextConfig;
